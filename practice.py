@@ -18,8 +18,6 @@ while (table[x][y] !=2): #멈춘 칸의 값이 2(먹이)가 아닌 경우 반복
 if (table[x][y]== 2): #먹이 발견한 경우 9로 칠하기
     table[x][y] = 9
 
-
-print()
 for i in range(10):
     for j in range(10):
         print(table[i][j], end=' ')
