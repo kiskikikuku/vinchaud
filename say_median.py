@@ -1,15 +1,18 @@
 import heapq
 
-heap = []
+maxheap = []
+minheap = []
 
 n = int(input())
 
-for i in range(n):
-    heapq.heappush(heap, int(input()))    
-    if(i % 2 ==0):
-        print(heap[int(i/2)])
+median = int(input())
+
+print(median)
+
+for i in range(n-1):
+    temp = int(input())
+    if median < temp:
+        heapq.heappush(maxheap, (-i, temp))
     else:
-        print(heap[int((i+1)/2)])
-
-
-print(heap)
+        heapq.heappush(temp, minheap)
+    
